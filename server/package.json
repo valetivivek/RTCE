@@ -1,0 +1,46 @@
+{
+    "name": "rtce-server",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "dev": "tsx watch src/index.ts",
+        "build": "tsc",
+        "start": "node dist/index.js",
+        "test": "vitest run",
+        "test:watch": "vitest",
+        "lint": "eslint src --ext .ts",
+        "format": "prettier --write src",
+        "migrate": "knex migrate:latest --knexfile knexfile.ts",
+        "migrate:rollback": "knex migrate:rollback --knexfile knexfile.ts",
+        "seed": "knex seed:run --knexfile knexfile.ts"
+    },
+    "dependencies": {
+        "bcrypt": "^5.1.1",
+        "cors": "^2.8.5",
+        "dotenv": "^16.4.5",
+        "express": "^4.21.0",
+        "express-rate-limit": "^7.4.0",
+        "helmet": "^7.1.0",
+        "jsonwebtoken": "^9.0.2",
+        "knex": "^3.1.0",
+        "pg": "^8.13.0",
+        "redis": "^4.7.0",
+        "socket.io": "^4.8.0",
+        "zod": "^3.23.8"
+    },
+    "devDependencies": {
+        "@types/bcrypt": "^5.0.2",
+        "@types/cors": "^2.8.17",
+        "@types/express": "^4.17.21",
+        "@types/jsonwebtoken": "^9.0.7",
+        "@types/node": "^22.5.0",
+        "@typescript-eslint/eslint-plugin": "^7.0.0",
+        "@typescript-eslint/parser": "^7.0.0",
+        "eslint": "^8.57.0",
+        "eslint-config-prettier": "^9.1.0",
+        "prettier": "^3.3.0",
+        "tsx": "^4.19.0",
+        "typescript": "^5.5.0",
+        "vitest": "^2.0.0"
+    }
+}
